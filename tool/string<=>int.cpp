@@ -16,3 +16,15 @@ int main()
     cout<<"n1="<<n1<<endl;//n1=12345
     
 }
+
+    //連續使用時須清空
+    ss.str("");
+    ss.clear();
+
+
+
+
+int n, m;
+string s;
+s = to_string(n);
+m = stoi(s)
