@@ -4,25 +4,23 @@ int main() {
 	int T;
 	cin >> T;
 	while(T--) {
-		string s, ans;
-		int a=0, b=0;
-		vector<char> v;
+		string s, m, l;
+		int a=0, b=0, temp;
 		for(int i=0; i<4; i++) {
 			cin >> s;
-			v.clear();
-			//ans = "";
-			//ans = ((s[0] - '0' * 2) + '0') + ans
-			v.push_back((s[0]-'0')*2 + '0');
-			v.push_back((s[2]-'0')*2 + '0');
-			b += s[1] + s[3];
-			for(int i=0; i<v.size(); i++) {
-				a += v[i];
-				cout << v[i] << endl;
+			for(int i=0; i<4; i++){
+				if(i % 2 == 0){
+					temp = (s[i]-'0') * 2;
+					l = to_string(temp);
+					m += l;
+				}else if(i % 2) {
+					b += s[i] - '0';
+				}
 			}
-			
 		}
-		//if((a+b) % 10) cout << "Invalid" << endl;
-		//else cout << "Valid" << endl;
+		for(int i=0; i<m.size(); i++) a += m[i] - '0';
+		if((a+b) % 10) cout << "Invalid" << endl;
+		else cout << "Valid" << endl;
 	}
 	return 0;
 }			
