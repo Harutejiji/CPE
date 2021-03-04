@@ -1,24 +1,24 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 int main() {
-	long long T, n, Case = 0;
-	cin >> T;
-	while(T--) {
-		Case++;
+	int t;
+	cin >> t;
+	for(int Case=1; Case <= t; Case++) {
+		int n;
 		cin >> n;
-		string s = to_string(n);
-		string d = s;
-		while(Case) {
-			long long temp = 0;
+		printf("Case #%d: %d ", Case, n);
+		bool exist[1000] = {false};
+		while(n != 1) {
+			string s = to_string(n);
+			n = 0;
 			for(int i=0; i<s.size(); i++) {
-				temp += ((s[i] - '0') * (s[i] - '0'));
-			}
-			s = to_string(temp);
-			if (s == d) break;
-			if (s == "1") break;
+				n += (s[i]-'0')*(s[i]-'0');
+				}
+			if(exist[n]) break;
+			exist[n] = true;
 		}
-		if (s == d) cout << "Case #" << Case << ": " << n << " is an Unhappy number.\n";
-		else cout << "Case #" << Case << ": " << n << " is a Happy number.\n";
+		if (n == 1) printf("is a Happy number.\n");
+		else printf("is an Unhappy number.\n");
 	}
 	return 0;
 }
