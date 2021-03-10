@@ -15,3 +15,5 @@ vector<int>
     int arr[] = {5, 4, 1, 7, 3, 8, 9, 10, 6, 2};
     std::vector<int> v(arr, arr+10);
     std::sort(v.begin(), v.end(), mycompare);// 降序排列
+
+result = std::max_element(v.begin(), v.end());//找最大值
