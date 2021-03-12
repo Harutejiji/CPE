@@ -13,7 +13,14 @@ vector<int>
     return a > b; // 降序排列
 }
     int arr[] = {5, 4, 1, 7, 3, 8, 9, 10, 6, 2};
-    std::vector<int> v(arr, arr+10);
-    std::sort(v.begin(), v.end(), mycompare);// 降序排列
+    vector<int> v(arr, arr+10);
+    sort(v.begin(), v.end(), mycompare);// 降序排列
 
-result = std::max_element(v.begin(), v.end());//找最大值
+result = max_element(v.begin(), v.end());//找最大值
+
+
+pair<int, string> p1; //default constructor 
+pair<string, double>p2("zhouyu", 100); // overroad constructor
+vector< pair<int, int> > v;
+v.push_back(make_pair(int, int));
+for(auto i: v) // for cout vector< pair<int, int> > v;
