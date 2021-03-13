@@ -13,7 +13,6 @@ int main() {
 			vector<int> v;
 			for(int i=0; i<s.size(); i++) m[s[i]]++;
 			for(auto i:m) v.push_back(i.second);
-			//int ch = 0;
 			for(int i=0; i<v.size(); i++) {
 				if(s.size() < 3 || v.size() < 2) {
 					flag = false;
@@ -22,7 +21,6 @@ int main() {
 				for(int j=i+1; j<v.size(); j++) {
 					if(v[i] == v[j]) {
 						flag = false;
-						//ch = 1;
 						break;
 					}
 				}
