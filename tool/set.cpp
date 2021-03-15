@@ -7,7 +7,7 @@ set<string> s
 *s.end()
 s.clear()
 s.size()
-
+s.find()
 int main() {
 
     set<int> s1{9,8,1,2,3,4,5,5,5,6,7,7 }; //自動排序，從小到大,剔除相同項
