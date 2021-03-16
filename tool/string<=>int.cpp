@@ -1,5 +1,5 @@
 https://www.itread01.com/content/1544839584.html
-
+https://home.gamer.com.tw/creationDetail.php?sn=4114818
 #include <sstream>
 using namespace std;
 int main()
@@ -21,9 +21,17 @@ int main()
 
     //連續使用時須清空
     ss.str("");
-    ss.clear();
+    ss.clear();//將指標重置,記憶體並沒有釋放
 
+string s1="12345";
+string s2="67890";
+ss << s1;
+ss << s2;
+ss >> n ;// n = 1234567890
 
+ss << s1;
+ss.str(s2);
+ss >> n ;// n = 67890
 
 
 int n, m;
