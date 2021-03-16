@@ -7,21 +7,25 @@ int main() {
 		int c = 0;
 		set<int> vis;
 		cout << "Original number was " << s << endl;
-		//printf("Original number was %d\n", s);
 		sort(s.begin(), s.end());
 		while(1) {
-			n = stoi(s);
+			stringstream ss;
+			ss << s;
+			ss >> n;
 			reverse(s.begin(), s.end());
-			m = stoi(s);
-			printf("%d - %d = %d\n", m, n, m-n);
-			n = m - n;
-			s = to_string(n);
+			ss.clear();
+			ss << s;
+			ss >> m;
+			cout << m << " - " << n << " = " << m - n << endl;
+			ss.str("");
+			ss.clear();
+			ss << m - n;
+			ss >> s;
 			sort(s.begin(), s.end());
-			c++;
-			if(vis.find(m - n) == vis.find(m - n)) break;	
-			vis.insert(n);
+			if (vis.find(m - n) != vis.end()) break;	
+			vis.insert(m - n);
 		}
-		printf("Chain length %d\n\n", c);	
+		cout << "Chain length " << vis.size()+1 << endl << endl;	
 	}
 	return 0;
 }
