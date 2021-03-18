@@ -3,6 +3,7 @@ using namespace std;
 int main() {
 	int t, n, m;
 	cin >> t;
+	char key[] = "ACGT";
 	while(t--) {
 		cin >> n >> m;
 		char dna[n][m];
@@ -21,10 +22,21 @@ int main() {
 			for(auto i:mm) {
 				mini = min(mini, i.second);
 				maxi = max(maxi, i.second);
-				if(mini != maxi) ans += mini;
 			}
-			for(auto i:mm) {
-				if(i.second == maxi) cout << i.first;
+			if(maxi == mini && mm.size() > 1) ans += maxi;
+			else if(mini > 1 && maxi > mini) ans += mini;
+			else ans += mm.size() - 1;
+			if(maxi == mini) {
+				for(int i=0; i<4; i++) {
+					if(mm[key[i]]) {
+						cout << key[i];
+						break;
+					}
+				}
+			}else {
+				for(auto i:mm) {
+					if(i.second == maxi) cout << i.first;
+				}
 			}
 			mm.clear();
 		}
