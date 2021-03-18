@@ -23,7 +23,7 @@ int main() {
 				mini = min(mini, i.second);
 				maxi = max(maxi, i.second);
 			}
-			if(maxi == mini && mm.size() > 1) ans += maxi;
+			if(maxi == mini && mm.size() > 1 && maxi > 1) ans += maxi;
 			else if(mini > 1 && maxi > mini) ans += mini;
 			else ans += mm.size() - 1;
 			if(maxi == mini) {
