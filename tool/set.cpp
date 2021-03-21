@@ -29,3 +29,12 @@ int main() {
      cout<<"set 中的第一個元素是 ："<<*s.begin()<<endl;// 1
      cout<<"set 中的最後一個元素是:"<<*s.end()<<endl;// 3
      s.clear();
+    
+    遍歷
+int main() {
+	set<int> s = {1, 2, 3};
+	set<int> ::iterator it;
+	for(it=s.begin(); it!=s.end(); it++) cout << *it << endl;
+	return 0;
+}
+    for(auto i:s) cout << i << endl;  //此法較簡便
