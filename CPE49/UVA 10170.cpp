@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
-	int n, m;
+	long long n, m;
 	while(cin >> n >> m) {
 		while(m > n) {
 			m -= n;
