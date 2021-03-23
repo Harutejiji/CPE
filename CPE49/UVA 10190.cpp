@@ -1,20 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
-	int n, m, temp;
+	int n, m;
 	while(cin >> n >> m) {
-		temp = m;
-		while(n > m && n > 1 && m > 1) 
-			m *= temp;
-		if ( n != m || n < 2 || m < 2) 
-			cout << "Boring!" << endl;
-		else {
-			cout << n;
-			while(n > 1) {
-				cout << " " << (n /= temp);
+		vector<int> v;
+		bool ans = true;
+		while(n) {
+			if(m == 1) {
+				ans = false;
+				break;
 			}
-			cout << endl;
+			if(n%m && n != 1) {
+				ans = false;
+				break;
+			}
+			v.push_back(n);
+			n /= m;
 		}
+		if(ans) {
+			for(int i=0; i<v.size(); i++) {
+				if(i > 0) cout << " " << v[i];
+				else cout << v[i];
+			}
+		}else {
+			cout << "Boring!";
+		}
+		cout << endl;
 	}
 	return 0;
 }
