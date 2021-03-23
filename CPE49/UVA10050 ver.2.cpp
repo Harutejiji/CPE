@@ -8,8 +8,9 @@ int main() {
 		cin >> d >> p;
 		int h[p];
 		bool ans[d+1] = {false};
-		int dd = 0;
-		for(int i=0; i<p; i++) cin >> h[i];
+		for(int i=0; i<p; i++) {
+			cin >> h[i];
+		}
 		for(int i=0; i<p; i++) {
 			for(int j=1; h[i]*j<=d; j++) {
 				ans[h[i]*j] = true;
