@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#define pi 2 * acos(0)
+#define pi M_PI
 using namespace std;
 int main() {
 	double s, a;
