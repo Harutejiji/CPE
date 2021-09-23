@@ -3,19 +3,18 @@ using namespace std;
 int main() {
 	int n;
 	while(cin >> n && n) {
-		int sum = 0;
 		vector <int> v;
-		stringstream ss;
-		string s;
-		while(n) {
-			sum += n % 2;
-			v.push_back(n%2);
+		int ans = 0;
+		while(n > 0) {
+			v.push_back(n % 2);
+			ans += n % 2;
 			n /= 2;
 		}
-		reverse(v.begin(), v.end());
-		for(auto i:v) ss << i;
-		ss >> s;
-		cout << "The parity of " << s << " is " << sum << " (mod 2).\n";
+		cout << "The parity of ";
+		for(int i=v.size()-1; i >= 0; i--) {
+			cout << v[i];
+		}
+		cout << " is " << ans << " (mod 2).\n";
 	}
 	return 0;
 }
