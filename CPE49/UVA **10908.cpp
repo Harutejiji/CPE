@@ -20,7 +20,7 @@ int main() {
 			char mid = maps[a][b];
 			while(++ans) {
 				int ta = a - ans, tb = b - ans;
-				if (ta < 0 || tb < 0 || a + ans >= n || b + ans >= m) {
+				if (ta < 0 || tb < 0 || a + ans >= n || b + ans >= m) {//邊界判斷
 					cout << ans*2 - 1 << endl;
 					break;
 				}
