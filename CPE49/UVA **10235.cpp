@@ -3,7 +3,7 @@ using namespace std;
 const int N = 1e6; // 1000000
 bool isP[N+1];
 vector<int>primes;
-int main(int argc, char *argv[]) {
+int main() {
 	for(int i=2; i<=N; i++) isP[i] = true;
 	for(int i=2; i<=N; i++) {
 		if (isP[i]) primes.push_back(i);
