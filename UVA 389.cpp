@@ -9,7 +9,7 @@ int main() {
 	while(cin >> s >> n >> m) {
 		int temp = 0;
 		for(int i=0; i<s.size(); i++) {
-			temp += (s[i] - '0') * pow(2, s.size() - 1 - i);
+			temp += (s[i] - '0') * pow(n, s.size() - 1 - i);
 		}
 		if (m > 10) {
 			v.clear();
@@ -22,9 +22,9 @@ int main() {
 			reverse(v.begin(), v.end());
 			for(int i=0; i<v.size(); i++) {
 				if(v[i] >= 10) d += h[v[i] - 10];
-				else d += (char)v[i];
+				else d += (char)v[i]+'0';
 			}
-			printf("%07s\n" , d);
+			printf("%07s\n" , d.c_str());
 		}
 		else if (m <= 10) {
 			b.clear();
@@ -36,11 +36,10 @@ int main() {
 			}
 			reverse(b.begin(), b.end());
 			for(int i=0; i<b.size(); i++) {
-				d += b[i];
+				d += b[i]+'0';
 			}
-			printf("%07s\n" , d);
+			printf("%07s\n" , d.c_str());
 		}
 	}
 	return 0;
 }
-				
