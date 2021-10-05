@@ -5,18 +5,24 @@ int main() {
 	while(cin >> t) {
 		bool flag = true;
 		int arr[t];
+		for(int i=0; i<t; i++) cin >> arr[i];
+		map<int, int>m;
 		for(int i=0; i<t; i++) {
-			cin >> arr[i];
-		}
-		map <int, int> m;
-		for(int i=0; i<t-1; i++) {
-			for(int j=i+1; j<t ; j++) {
+			if(arr[i] < 0) {
+				flag = false;
+				break;
+			}
+			if(arr[i] >= arr[i+1] && (i+1) < t) {
+				flag = false;
+				break;
+			}
+			for(int j=i; j<t; j++) {
 				m[arr[i]+arr[j]]++;
 			}
 		}
-		for(auto i:m)  if(i.second > 1) flag = false;//cout << i.first << " " << i.second << endl;
-		if(flag) cout << "Case #" << ++c  << ": It is a B2-Sequence.\n\n";
-		else cout << "Case #" << ++c  << ": It is not a B2-Sequence.\n\n";
+		if(flag)for(auto i:m) if(i.second >1) flag = false;
+		if(flag) printf("Case #%d: It is a B2-Sequence.\n\n", ++c);
+		else printf("Case #%d: It is not a B2-Sequence.\n\n", ++c);
 	}
 	return 0;
 }
