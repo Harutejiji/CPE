@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
-using namespace std;//1 11 2 22
-//from no.3 year the m will be no.2 year's f+m and f will be no.2 & no.1 year's f+f   	
-/*	f m
+using namespace std;
+/*from 3rd year the m will be 2nd year's f+m and f will be 2nd & 1st year's f(2nd)+f(1st)   	
+	f m
 	1 1
 	2 2
 	3 4
