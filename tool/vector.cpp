@@ -1,9 +1,16 @@
+https://mropengate.blogspot.com/2015/07/cc-vector-stl.html
+
 vector<int>
   => vector<int>arr //宣告名為 arr 的 vector<int>
   => arr.push_back(a) // 把 a 放到 arr 的最後面
   => arr.size()
   => arr[1]
   => arr.clear()//清空
+  
+arr[i] - 存取索引值為 i 的元素值。
+arr.at(i) - 存取索引值為 i 的元素的值，
+arr.front() - 回傳 vector 第一個元素的值。
+arr.back() - 回傳 vector 最尾元素的值。
   
   vector<int> arr = {5, 4, 1, 7, 3, 8, 9, 10, 6, 2};
   sort(arr.begin(), arr.begin()+10);//升序
