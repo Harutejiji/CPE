@@ -1,3 +1,5 @@
+https://edisonx.pixnet.net/blog/post/35305668
+
 %c//：以字元方式輸出
 %d//：10 進位整數輸出
 %lld//:long long int
