@@ -38,3 +38,16 @@ int n, m;
 string s;
 s = to_string(n);
 m = stoi(s)
+
+    
+int main() {
+char a;
+stringstream ss;
+int n = 1;
+ss << n;
+if(ss.fail()) cout << '2' << endl;
+ss >> a;
+ss >> a;
+if(ss.fail()) cout << '1' << endl;//輸出 
+return 0;
+}
