@@ -1,0 +1,8 @@
+功能	        C++ string	                      C字元陣列
+定義字串	    string str;	                   char str[100];
+單個字元輸出	 str[i] / str.at(i)	               str[i]
+字串長度	    str.length() / str.size()	      strlen(str)
+讀取一行	    getline(cin,str)	            gets(str)
+賦值	        str = “Hello”;	              strcpy(str,“Hello”);
+連線字串	    str = str + “Hello”	          strcat(str,“Hello”);
+比較字串	    str == “Hello”;	            strcmp(str,“Hello”);
