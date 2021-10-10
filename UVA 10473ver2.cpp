@@ -1,4 +1,4 @@
-/*#include <bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main() {
 	string s;
@@ -17,4 +17,4 @@ int main() {
 		}
 	}
 	return 0;
-}*/
+}
