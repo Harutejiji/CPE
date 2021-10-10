@@ -5,14 +5,14 @@ int main() {
 	stringstream ss;
 	vector<int> v;
 	char hex[] = {'A', 'B', 'C', 'D', 'E', 'F'};
-	while(getline(cin, s) && s != "-1") {
-		int n, temp;
+	while(cin >> s && s != "-1") {
+		int n = 0, temp;
 		v.clear();
 		ss.clear();
 		ss.str("");
 		if(s[1] == 'x') {
 			for(int i=s.size() - 1, j = 0; i > 1; i--, j++) {
-				n += (s[i] - '0') * pow(16, j);
+				n += int((s[i] - '0')) * pow(16, j);
 			}
 			cout << n << endl;
 		}else {
