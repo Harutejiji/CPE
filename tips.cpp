@@ -17,6 +17,8 @@ int main() {
 	return b % 2 ? a * _pow(a*a, b/2) : _pow(a*a, b/2);
 }
   
-  chord = sqrt(r * r * 2 - 2 * r * r * cos(pi*a/180));
+chord = sqrt(r * r * 2 - 2 * r * r * cos(pi*a/180));
   
-  https://github.com/Harutejiji/CPE/blob/a52c4421d5c3e68360e10ababc84ee37f8a7276c/CPE49/UVA%20**10056(math).cpp
+https://github.com/Harutejiji/CPE/blob/a52c4421d5c3e68360e10ababc84ee37f8a7276c/CPE49/UVA%20**10056(math).cpp
+
+https://github.com/Harutejiji/CPE/blob/f2da5b8767909d67ce575e5aaf8ad8cb0355d9fe/CPE49/UVA%20**118.cpp
