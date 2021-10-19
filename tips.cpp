@@ -1,3 +1,10 @@
+bool cmp(int a, int b) {
+	if(a % m != b % m) return a % m < b % m;
+	if(abs(a % 2) != abs(b % 2)) return a % 2;
+	return a % 2 == 0 ? a < b : a > b;
+}
+
+
 const int N = 1e6; // 1000000
 bool isP[N+1];
 vector<int>primes;
