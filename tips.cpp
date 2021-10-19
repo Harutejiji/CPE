@@ -19,6 +19,14 @@ int main() {
   
 chord = sqrt(r * r * 2 - 2 * r * r * cos(pi*a/180));
   
-https://github.com/Harutejiji/CPE/blob/a52c4421d5c3e68360e10ababc84ee37f8a7276c/CPE49/UVA%20**10056(math).cpp
+if(p < 1e-7) {
+			printf("%.4lf\n", 0.0);
+			continue;
+		}
+		if(k == 1) {
+			printf("%.4lf\n", p / (1 - pow(q, n)));
+		}else{
+			printf("%.4lf\n", p * pow(q, k-1) / ( 1 - pow(q, n)));
+		}
 
 https://github.com/Harutejiji/CPE/blob/f2da5b8767909d67ce575e5aaf8ad8cb0355d9fe/CPE49/UVA%20**118.cpp
