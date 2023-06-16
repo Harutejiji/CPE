@@ -2,7 +2,7 @@
 using namespace std;
 int main() {
 	string s, d;
-	while(cin >> s >> d) {
+	while(getline(cin, s) && getline(cin, d)) {
 		map<char, int> ss, dd;
 		for(int i=0; i<s.size(); i++) ss[s[i]]++;
 		for(int i=0; i<d.size(); i++) dd[d[i]]++;
