@@ -1,4 +1,4 @@
-vector string 
+vector or string 
 reverse( x.begin(), x.end())
   
 arr
