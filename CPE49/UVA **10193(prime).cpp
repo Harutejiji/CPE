@@ -14,9 +14,9 @@ int main() {
 	while(cin >> a >> b) {
 		c++;
 		if(__gcd(convert(a), convert(b)) != 1)
-			printf("Pair #%d: All you need is love!\n", c);
+			printf("Pair #%d: All you need is love!\n", ++c);
 		else 
-			printf("Pair #%d: Love is not all you need!\n", c);
+			printf("Pair #%d: Love is not all you need!\n", ++c);
 	}
 	return 0;
 }
