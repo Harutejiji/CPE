@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <bits/stdc++.h> //想法 : 找循環節，保存下來
 using namespace std;
 typedef long long ll;
 ll pow2[21];
