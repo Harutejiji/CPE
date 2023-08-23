@@ -28,7 +28,7 @@ int main() {
 			f1 = f2;
 			f2 = f3;
 		}
-		circle[i] = j;
+		circle[i] = j; //找重複節
 	}
 	int n, m;
 	while(cin >> n >> m) {
