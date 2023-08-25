@@ -1,4 +1,4 @@
-#include <bits/stdc++.h> //10258
+#include <bits/stdc++.h> 
 using namespace std;
 bool mycmp(pair<int, pair<int, int>> a, pair<int, pair<int, int>> b) {
 	if(a.second.first == b.second.first) return a.first < b.first;
@@ -9,40 +9,37 @@ int main() {
 	cin >> n;
 	cin.get();
 	cin.get();
-	while(n--) {
-		bool flag = true;
+	while(n--) {	
 		int time[101];
-		memset(time, 0, sizeof(time));
+		bool player[101];
 		int ans[101] = {0};
+		memset(time, 0, sizeof(time));
+		memset(player, false, sizeof(player));
 		vector <pair<int, pair<int, int>>> v;
 		int pl, pr, ti;
 		string s;
 		char a;
-		while(getline(cin,s) && s != "") {
-			/*if(b == '\n') {
-				flag = false;
-				break;
-			}
-			else pl = b - '0';*/
+		while(getline(cin,s) && s != "") {			
 			stringstream ss(s);
-			ss >> pl >> pr >> ti >> a;
-			//if(a == 'R' || a == 'U' || a == 'E') continue;
+			ss >> pl >> pr >> ti >> a;			
 			for(int i=1; i<=100; i++) {
 				if(pl == i) {
+					player[i] = true;
 					if(a == 'I'){
 						time[i] += 20;
 						break;
 					}
 					else {
+						if(a == 'R' || a == 'U' || a == 'E') continue;
 						time[i] += ti;
 						ans[i] += 1;
-						//break;
 					}
 				}
 			}
 		}
 		for(int i=1; i<=100; i++) {
-			if(time[i]) {
+			if(!ans[i]) time[i] = 0;
+			if(time[i] || player[i]) {
 				v.push_back(make_pair(i, make_pair(ans[i], time[i])));
 			}
 		}
