@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int main() {
-	char c[19];
+	char c[256];
 	c['B'] = '1';
 	c['F'] = '1';
 	c['P'] = '1';
@@ -22,16 +22,15 @@ int main() {
 	c['R'] = '6';
 	string s;
 	char a;
-	vector <int> v;
 	while(cin >> s) {
+		vector <int> v;
 		if(s.size() == 1) {
 			cout << endl;
 			continue;
 		}
 		for(int i=0; i<s.size(); i++) {
-			if(s[i-1] == s[i] && i > 0) continue;
+			if(c[s[i-1]] == c[s[i]] && i > 0 || s[i] == 'A' || s[i] == 'E' || s[i] == 'I' || s[i] == 'O' || s[i] == 'U' || s[i] == 'H' || s[i] == 'W' || s[i] == 'Y') continue;
 			v.push_back(c[s[i]]-'0');
-			//a = s[i];
 		}
 		for(int i=0; i<v.size(); i++) {
 			cout << v[i];
