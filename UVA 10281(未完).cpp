@@ -21,7 +21,7 @@ int main() {
 			cout << a << " ";
 			aa >> hh >> b >> mm >> b >> ssec;
 			sum = ((hh*60) + mm + (ssec/60)) - ((h*60) + m + (sec/60));
-			double s = (v * sum / 60) + d;
+			double s = (v * sum / 60.0) + d; // 當寫/60.0時會全部除到小數點後
 			printf("%.2lf km\n", s);
 		}
 	}
