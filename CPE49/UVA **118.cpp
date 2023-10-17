@@ -31,10 +31,10 @@ int main() {
 					}
 					if(sign[x][y]) {
 						if(y+1 > m) continue;
-						else {
+						/*else {
 							y += 1;
 							continue;
-						}
+						}*/
 					}
 					y += 1;
 				}
@@ -46,10 +46,10 @@ int main() {
 					}
 					if(sign[x][y]) {
 						if(x+1 > n) continue;
-						else {
+						/*else {
 							x += 1;
 							continue;
-						}
+						}*/
 					}
 					 x += 1;
 				}
@@ -61,10 +61,10 @@ int main() {
 					}
 					if(sign[x][y]) {
 						if(y-1 < 0) continue;
-						else {
+						/*else {
 							y -= 1;
 							continue;
-						}
+						}*/
 					}
 					y -= 1;
 				}
@@ -76,10 +76,10 @@ int main() {
 					}
 					if(sign[x][y]) {
 						if(x-1 < 0) continue;
-						else {
+						/*else {
 							x -= 1;
 							continue;
-						}
+						}*/
 					}
 					x -= 1;
 				}
