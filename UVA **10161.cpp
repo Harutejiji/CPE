@@ -1,3 +1,4 @@
+//https://blog.csdn.net/mobius_strip/article/details/31805403
 #include <bits/stdc++.h>
 using namespace std;
 void deal(int n) {
