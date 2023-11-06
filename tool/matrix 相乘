@@ -1,0 +1,6 @@
+值的相乘
+https://hackmd.io/@siahuat0727/HJscCbWgV?type=view
+
+matrix 相乘
+A 10*2 B 2*10 C 10*20
+ABC => 先做AB 10*2*10 = 200 AB成為新的10*10 之後再乘C 10*10*20 = 2000 然後兩個數值相加 2200
