@@ -6,7 +6,8 @@ vector<int>
   => arr.size()
   => arr[1]
   => arr.clear()//清空
-  
+  => pop_back() //删除 vector 容器中最後一個元素，該容器的大小（size）會減 1，但容量（capacity）不會發生改變。
+
 arr[i] - 存取索引值為 i 的元素值。
 arr.at(i) - 存取索引值為 i 的元素的值，
 arr.front() - 回傳 vector 第一個元素的值。
