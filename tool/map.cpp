@@ -1,7 +1,8 @@
 map<int ,int> mapinfo ;
-//直接将map删除了
-mapinfo.clear();
- 
+
+mapinfo.clear();//直接将map删除了
+
+mapinfo.count(1);//尋找mapinfo裡是否有1，有的話回傳true;
  
 //用map.erase(map.begin(),map.end())比较好  清空元素
 gTaskDeal.matrix_info.erase(gTaskDeal.matrix_info.begin(),gTaskDeal.matrix_info.end());
