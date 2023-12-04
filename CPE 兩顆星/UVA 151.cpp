@@ -9,11 +9,11 @@ int main() {
 				cout << 1 << endl;
 				break;
 			}
-			for(k = 1; k<=n; k++) r[k] = 1;
-			r[1] = 0;
-			cnt = 1;
-			i = 1;
-			j = 0;
+			for(k = 1; k<=n; k++) r[k] = 1;//將全部區域設為通電
+			r[1] = 0;//區域是否斷電
+			cnt = 1; //總共被斷電的區域
+			i = 1;//指出present的指標
+			j = 0;//看是否已走了m步
 			while(cnt < n) {
 				i++;
 				if(r[i] == 1) {
