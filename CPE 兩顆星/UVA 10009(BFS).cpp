@@ -5,7 +5,7 @@ uva10009
 #include <bits/stdc++.h>
 using namespace std;
 void printpath(map<string, string> prev, string v) {
-	const string u = prev[v];
+	string u = prev[v];
 	if(u != v) printpath(prev, u);
 	cout << v[0];
 }
